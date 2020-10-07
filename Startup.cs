@@ -44,6 +44,9 @@ namespace GenericAPI
             services.AddScoped<IExampleClassRepository, ExampleClassRepository>();
             services.AddScoped<IExampleClassService, ExampleClassService>();
 
+            services.AddScoped<IExampleSubClassRepository, ExampleSubClassRepository>();
+            services.AddScoped<IExampleSubClassService, ExampleSubClassService>();
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             //AutoMapper declared

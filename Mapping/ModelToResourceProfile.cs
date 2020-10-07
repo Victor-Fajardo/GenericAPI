@@ -14,6 +14,7 @@ namespace GenericAPI.Mapping
         {
             //Create maps between Models and Resources
             CreateMap<ExampleClass, ExampleClassResource>();
+            CreateMap<ExampleSubClass, ExampleSubClassResource>();
         }
     }
 }

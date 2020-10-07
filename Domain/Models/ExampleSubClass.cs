@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 
 namespace GenericAPI.Domain.Models
 {
-    public class ExampleClass
+    public class ExampleSubClass
     {
         public int Id { get; set; }
         public string Data { get; set; }
 
-        //Declaron ExampleSubClass as a list inside ExampleClass
-        public IList<ExampleSubClass> ExampleSubClasses { get; set; } = new List<ExampleSubClass>();
+        //Declare ExampleSubClass as a list inside ExampleClass
+        public int ExampleClassId { get; set; }
+        public ExampleClass ExampleClass { get; set; }
     }
 }

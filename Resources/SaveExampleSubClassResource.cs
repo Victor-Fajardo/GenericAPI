@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace GenericAPI.Resource
 {
-    public class SaveExampleClassResource
+    public class SaveExampleSubClassResource
     {
         //Atributes declared here
+        //Id is not used here
         //Class atributes from AppDbContext are specified here
         [Required]
         [MaxLength(20)]

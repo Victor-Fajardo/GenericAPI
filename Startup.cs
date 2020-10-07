@@ -6,6 +6,7 @@ using AutoMapper;
 using GenericAPI.Domain.Persistence.Contexts;
 using GenericAPI.Domain.Repositories;
 using GenericAPI.Domain.Services;
+using GenericAPI.Extensions;
 using GenericAPI.Persistence.Repositories;
 using GenericAPI.Service;
 using Microsoft.AspNetCore.Builder;
@@ -51,6 +52,9 @@ namespace GenericAPI
 
             //AutoMapper declared
             services.AddAutoMapper(typeof(Startup));
+
+            //Adds Swagger to the API
+            services.AddCustomSwagger();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -71,6 +75,9 @@ namespace GenericAPI
             {
                 endpoints.MapControllers();
             });
+
+            //Declare the usage of Swagger
+            app.UseCustomSwagger();
         }
     }
 }
